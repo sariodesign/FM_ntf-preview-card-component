@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution on Github](https://github.com/sariodesign/FM_ntf-preview-card-component)
+- Live Site URL: [Live code](https://fm-ntf-preview-card-component.vercel.app/)
 
 ## My process
 
