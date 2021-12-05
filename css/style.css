@@ -1,0 +1,190 @@
+/* Colors */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white-color: hsl(0, 0%, 100%);
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+/* Style properties */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --body-font: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    font-family: var(--body-font);
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 24px;
+    width: calc(100% - 48px);
+}
+
+.card-image {
+    border-radius: 8px;
+    margin: 0 0 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .card-image {
+        cursor: pointer;
+    }
+}
+
+.card-image:before {
+    background-image: url(../images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .25s ease-in-out;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.card-image:after {
+    background-color: var(--cyan);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .25s ease-in-out;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+@media (hover: hover) {
+    .card-image:hover:before {
+        opacity: 1;
+    }
+    
+    .card-image:hover:after {
+        opacity: .5;
+    }
+}
+
+.content-link {
+    color: var(--white-color);
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+@media (hover: hover) {
+    .content-link:hover {
+        color: var(--cyan);
+    }
+}
+
+.content-desc {
+    color: var(--soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0 0 20px;
+}
+
+.content-info {
+    align-items: center;
+    border-bottom: 1px solid var(--line-color);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+}
+
+.content-info div {
+    align-items: center;
+    color: var(--soft-blue);
+    display: flex;
+    column-gap: 6px;
+}
+
+.content-info div:first-child {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.creator {
+    align-items: center;
+    column-gap: 16px;
+    display: flex;
+}
+
+.creator-avatar {
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    height: 32px;
+    margin: 0;
+    width: 32px;
+}
+
+.creator-info {
+    color: var(--soft-blue);
+}
+
+.creator-info a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+@media (hover: hover) {
+    .creator-info a:hover {
+        color: var(--cyan);
+    }
+}
+
+.attribution {
+    bottom: 0;
+    color: var(--soft-blue);
+    font-size: 12px;
+    left: 0;
+    padding: 16px;
+    position: fixed;
+    text-align: center;
+    width: 100%
+}
+
+.attribution a {
+    color: var(--white-color);
+    text-decoration: none;
+}
